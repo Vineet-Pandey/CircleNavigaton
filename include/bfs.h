@@ -9,10 +9,29 @@
 #include <string>
 #include <unordered_set>
 
-
+/**
+ * @class BFSPlanner
+ * @brief Implements a breadth-first search (BFS) pathfinding algorithm.
+ *
+ * This class inherits from the PathPlanner interface and provides an
+ * implementation for the findPath function using the BFS algorithm. The
+ * BFSPlanner is capable of finding a path between two points in a grid-based
+ * map.
+ */
 class BFSPlanner : public PathPlanner {
 public:
-
+  /**
+   * @brief Finds a path from the start point to the goal point using BFS.
+   *
+   * This method implements the BFS algorithm to find the shortest path in a
+   * grid map. It uses a queue to explore the nodes in a breadth-first manner
+   * and keeps track of visited nodes to avoid redundant processing.
+   *
+   * @param map The grid map to search for the path.
+   * @param start The starting point of the path.
+   * @param goal The goal point of the path.
+   * @return A vector of points representing the path from start to goal.
+   */
   std::vector<Geometry::Point> findPath(const GridMap &map,
                                         const Geometry::Point &start,
                                         const Geometry::Point &goal) override {
