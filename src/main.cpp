@@ -1,9 +1,25 @@
-
+/**
+ * @file main.cpp
+ * @brief Entry point for the robot navigation program.
+ *
+ * This program defines a robot, sets up a map with obstacles, uses a BFS
+ * planner to find a path from the start to the goal, and then prints the path.
+ *
+ * @author Vineet
+ * @date 11/03/24
+ */
 #include "bfs.h"
 #include "circle.h"
 #include "robot.h"
 #include <iostream>
-
+/**
+ * @brief Main function for the robot navigation.
+ *
+ * Sets up the robot, map, and obstacles, then uses the BFS planner to find
+ * a path from the starting position to the goal.
+ *
+ * @return int Exit status of the program.
+ */
 int main() {
   // Define robot and map
   Robot robot(0, 0, 1.0);
